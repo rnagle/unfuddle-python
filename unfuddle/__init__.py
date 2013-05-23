@@ -93,7 +93,7 @@ class Unfuddle:
         url = "people"
 
         if project_id is not None:
-            url = "%s/%s" (url, project_id)
+            url = "%s/%s" % (url, project_id)
 
         return self.get(url)
 
