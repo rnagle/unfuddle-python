@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 setup(
     name='unfuddle',
-    version='0.1',
+    version='0.1.1',
     author=u'Ryan Nagle',
     author_email='rmnagle@gmail.com',
     packages=find_packages('unfuddle'),
@@ -14,6 +14,6 @@ setup(
     zip_safe=False,
     include_package_data=True,
     install_requires=[
-        'requests>=1.1.2',
+        'requests>=2.0.0',
     ]
 )

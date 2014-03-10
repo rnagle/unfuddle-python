@@ -1,2 +1,5 @@
 .DS_Store
 *.pyc
+# Build directories
+dist
+*.egg-info
