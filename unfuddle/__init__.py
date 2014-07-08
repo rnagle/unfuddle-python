@@ -103,7 +103,6 @@ class Unfuddle:
 
     # Milestones
     def get_milestones(self, project_id=None, status=None):
-
         if project_id is not None:
             url = "projects/%s/milestones" % project_id
             return self.get(url)
@@ -129,6 +128,23 @@ class Unfuddle:
 
         if short_name is not None:
             url = "projects/by_short_name/%s" % short_name
+
+        return self.get(url)
+
+    def get_components(self, project_id=None):
+        if project_id is not None:
+            url = "projects/%s/components" % project_id
+
+        return self.get(url)
+
+    def get_component(self, project_id, component_id=None):
+        if project_id is not None:
+            url = "projects/%s/components" % project_id
+
+            if component_id is not None:
+                url += "/%s" % component_id
+            else:
+                raise ValueError("A component_id is required")
 
         return self.get(url)
 
